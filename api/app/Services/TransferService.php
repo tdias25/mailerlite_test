@@ -33,6 +33,8 @@ class TransferService
             throw new \Exception('source account does not have enough balance');
         }
 
+        //begin db transaction
+
         $this->TransactionRepository->create([
             'from' => $from,
             'to' => $to,
@@ -48,5 +50,6 @@ class TransferService
             'balance' => $toAccount->balance + (float)$amount
         ]);
 
+      //end db transaction
     }
 }

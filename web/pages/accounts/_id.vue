@@ -94,7 +94,7 @@ export default {
       transactions: [],
 
       loading: true,
-      ApiEndpoint: "http://127.0.0.1:8000/api",
+      ApiEndpoint: process.env.API_URL,
       userId: this.$route.params.id,
       errors: [],
       fields: [
@@ -118,7 +118,6 @@ export default {
     };
   },
   computed: {
-    // a computed getter
     currencySymbol: function () {
       return this.account.currency == "usd" ? "$" : "€";
     },

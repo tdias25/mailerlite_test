@@ -27,11 +27,11 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 After building the NuxtJs project, you have to specific the  ```API Endpoint``` URL in order for the project to work properly.
 
 
-first, locate this file: 
-```pages/accounts/_id.vue```
+first, locate the enviroment file: 
+```.env```
 
 
-then change the value of the variable ```ApiEndpoint``` to the api url of your choosing. ```(without trailing slash)```
+then change the value of the variable ```API_URL``` to the api url of your choosing. ```(without trailing slash)```
 
 or you can use the default value defined as:
-```ApiEndpoint: "http://127.0.0.1:8000/api"```
+```API_URL="http://127.0.0.1:8000/api"``` (yes, without trailing slash)
