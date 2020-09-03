@@ -13,7 +13,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(
+            'App\Repositories\Contracts\AccountRepositoryContract',
+            'App\Repositories\AccountEloquentRepository'
+        );
+
+        $this->app->bind(
+            'App\Repositories\Contracts\TransactionRepositoryContract',
+            'App\Repositories\TransactionEloquentRepository'
+        );
     }
 
     /**
@@ -23,6 +31,5 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
     }
 }

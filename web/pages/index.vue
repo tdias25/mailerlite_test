@@ -1,12 +1,17 @@
 <template>
   <div class="container">
     <div>
+      <div class="text-center pb-5">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Lietuvos_Bankas_Logo.svg/1200px-Lietuvos_Bankas_Logo.svg.png"
+          width="200"
+          class="img-fluid"
+          alt="Responsive image"
+        />
+      </div>
+
       <b-form>
-        <b-form-group
-          id="input-group-2"
-          label="Enter your account ID:"
-          label-for="input-2"
-        >
+        <b-form-group id="input-group-2" label="Enter your account ID:" label-for="input-2">
           <b-form-input
             id="input"
             type="number"
@@ -16,9 +21,7 @@
           ></b-form-input>
         </b-form-group>
 
-        <b-button nuxt-link :to="'/accounts/' + accountID" variant="primary"
-          >Login</b-button
-        >
+        <b-button nuxt-link :to="'/accounts/' + accountID" variant="primary">Login</b-button>
       </b-form>
     </div>
   </div>
@@ -30,10 +33,10 @@ import Vue from "vue";
 export default Vue.extend({
   data() {
     return {
-      accountID: 1
+      accountID: 1,
     };
   },
-  components: {}
+  components: {},
 });
 </script>
 

@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => 'accounts'], function() {
+
+    Route::get('', 'AccountController@index');
+    Route::get('{id}', 'AccountController@show');
+    Route::get('{id}/transactions', 'AccountController@transactions');
+    Route::post('{id}/transactions', 'TransactionController@transfer');
+
 });

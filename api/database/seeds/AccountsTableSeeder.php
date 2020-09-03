@@ -13,12 +13,18 @@ class AccountsTableSeeder extends Seeder
     {
         DB::table('accounts')->insert([
             'name' => 'John',
-            'balance' => 15000
+            'balance' => 1500,
+            'currency' => 'usd',
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
 
         DB::table('accounts')->insert([
             'name' => 'Peter',
-            'balance' => 100000
+            'balance' => 1000,
+            'currency' => 'eur',
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
     }
 }
